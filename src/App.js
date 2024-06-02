@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import Dashboard from './Dashboard';
 
 function App() {
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-900 text-white min-h-screen p-4">
+      <h1 className="text-3xl font-bold mb-4">Security Dashboard</h1>
+      <Dashboard />
     </div>
   );
 }
